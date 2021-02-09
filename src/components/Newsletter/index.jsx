@@ -5,10 +5,11 @@ import Button from "../Button";
 import Input from "../Input";
 import api from "../../services/api";
 
-import { Container, InputContainer } from "./style";
+import { Container, FormContainer, InputContainer } from "./style";
+import ErrorText from "../ErrorText";
 
 const Newsletter = () => {
-  const { handleSubmit, control } = useForm();
+  const { handleSubmit, control, errors } = useForm();
   const [isVisible, setIsVisible] = useState(false);
 
   const onSubmit = useCallback(async (data) => {
@@ -35,39 +36,53 @@ const Newsletter = () => {
         becomes available in your area!
       </p>
 
-      <InputContainer>
+      <FormContainer>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Controller
-            control={control}
-            render={({ onChange, value }) => (
-              <Input
-                placeholder="Your name"
-                borderRadius="4px"
-                height="48px"
-                width="234px"
-                borderColor="#DFDFDF"
-                value={value}
-                onChange={onChange}
-              />
-            )}
-            name="name"
-          />
+          <InputContainer>
+            <Controller
+              control={control}
+              render={({ onChange, value }) => (
+                <Input
+                  placeholder="Your name"
+                  borderRadius="4px"
+                  height="48px"
+                  width="234px"
+                  borderColor="#DFDFDF"
+                  value={value}
+                  onChange={onChange}
+                />
+              )}
+              name="name"
+              rules={{
+                required:
+                  "It is necessary to inform your name before submit the newsletter signature",
+              }}
+            />
+            <ErrorText message={errors?.name?.message} />
+          </InputContainer>
 
-          <Controller
-            control={control}
-            render={({ onChange, value }) => (
-              <Input
-                placeholder="Your email"
-                borderRadius="4px"
-                height="48px"
-                width="234px"
-                borderColor="#DFDFDF"
-                onChange={onChange}
-                value={value}
-              />
-            )}
-            name="email"
-          />
+          <InputContainer>
+            <Controller
+              control={control}
+              render={({ onChange, value }) => (
+                <Input
+                  placeholder="Your email"
+                  borderRadius="4px"
+                  height="48px"
+                  width="234px"
+                  borderColor="#DFDFDF"
+                  onChange={onChange}
+                  value={value}
+                />
+              )}
+              name="email"
+              rules={{
+                required:
+                  "It is necessary to inform your email before submit the newsletter signature",
+              }}
+            />
+            <ErrorText message={errors?.email?.message} />
+          </InputContainer>
 
           <Button
             height="48px"
@@ -81,7 +96,7 @@ const Newsletter = () => {
             Send
           </Button>
         </form>
-      </InputContainer>
+      </FormContainer>
       {isVisible ? (
         <p>
           Now you are registered and will receive newsletter notification on

@@ -20,10 +20,14 @@ export const Container = styled.div`
   }
 `;
 
-export const InputContainer = styled.div`
+export const FormContainer = styled.div`
   form {
     display: flex;
     flex-direction: table-row;
-    margin-bottom: 64px;
+    margin-bottom: 24px;
   }
+`;
+
+export const InputContainer = styled.div`
+  max-width: 245px;
 `;

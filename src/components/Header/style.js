@@ -5,6 +5,8 @@ import logo from "../../assets/logo.svg";
 export const Container = styled.header`
   display: flex;
   flex-direction: row;
+
+  width: 1440px;
   height: 80px;
   padding: 0 20px;
 `;
@@ -14,6 +16,7 @@ export const HeaderLogoContainer = styled.div`
   width: 64px;
   background-color: #00c88c;
   border-radius: 0 0 32px 32px;
+  margin-left: 20px;
   margin-right: 38px;
 
   display: flex;
