@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-import profileImage from "../../assets/ProfileImage.svg";
-
-export const Container = styled.div`
+export const Container = styled.section`
   height: 112px;
   width: 1440px;
   display: flex;
@@ -12,11 +10,10 @@ export const Container = styled.div`
   border-bottom: 1px solid #dfdfdf;
 `;
 
-export const ProfileContainer = styled.div`
+export const ProfileImage = styled.img`
   height: 65px;
   width: 65px;
 
-  background: url(${profileImage});
   margin-right: 32px;
 `;
 
@@ -29,5 +26,10 @@ export const ContentInformation = styled.div`
   p {
     color: black;
     margin-left: 2px;
+  }
+
+  a {
+    color: #5e20a4;
+    font-weight: 500;
   }
 `;

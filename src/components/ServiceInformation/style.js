@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import imageSection from "../../assets/ImageSection1.svg";
-
 export const Container = styled.section`
   height: 632px;
   width: 1440px;
@@ -35,13 +33,17 @@ export const WorkingContent = styled.div`
 
     a {
       font-weight: 500;
+      color: #5e20a4;
     }
+  }
+
+  a {
+    font-weight: 500;
+    color: #5e20a4;
   }
 `;
 
-export const ImageSection = styled.div`
+export const ImageSection = styled.img`
   height: 392px;
   width: 584px;
-
-  background: url(${imageSection});
 `;

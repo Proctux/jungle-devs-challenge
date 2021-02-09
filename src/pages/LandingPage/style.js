@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import backgroundImage from "../../assets/Image.png";
+import backgroundImage from "../../assets/Image.svg";
 import headerImage from "../../assets/ImageHeader.svg";
 
 export const Container = styled.div`

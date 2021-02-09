@@ -1,5 +1,7 @@
 import React from "react";
 
+import imageSection from "../../assets/ImageSection1.svg";
+
 import { Container, WorkingContent, ImageSection } from "./style";
 
 const ServiceInformation = () => (
@@ -17,7 +19,7 @@ const ServiceInformation = () => (
       </p>
       <a href="/">Ready to get started?</a>
     </WorkingContent>
-    <ImageSection />
+    <ImageSection src={imageSection} />
   </Container>
 );
 
