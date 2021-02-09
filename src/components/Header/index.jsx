@@ -1,6 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Button from "../Button";
+import ToggleButton from "../ToggleButton";
 
 import {
   Container,
@@ -10,7 +12,7 @@ import {
   HeaderLinks,
 } from "./style";
 
-const Header = () => (
+const Header = ({ onSelect, isSelected }) => (
   <Container>
     <HeaderLogoContainer>
       <HeaderLogo />
@@ -21,6 +23,8 @@ const Header = () => (
         <a href="/">Browse Shares</a>
         <a href="/">Our Story</a>
       </HeaderLinks>
+
+      <ToggleButton onSelect={onSelect} isSelected={isSelected} />
 
       <Button
         height="44px"
@@ -37,5 +41,10 @@ const Header = () => (
     </HeaderInfo>
   </Container>
 );
+
+Header.propTypes = {
+  onSelect: PropTypes.func.isRequired,
+  isSelected: PropTypes.bool.isRequired,
+};
 
 export default Header;

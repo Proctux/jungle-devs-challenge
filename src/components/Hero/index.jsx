@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import { FiPlay } from "react-icons/fi";
 
 import Header from "../Header";
@@ -14,32 +14,54 @@ import {
   VideoPlayInfo,
 } from "./style";
 
-const Hero = () => (
-  <HeaderContainer>
-    <Image src={backgroundImage} />
-    <Header />
-    <HeaderContent>
-      <ContentContainer>
-        <h1>Easily create or join a local nanny share with Hapu</h1>
+const Hero = () => {
+  const [isOn, setIsOn] = useState(true);
 
-        <p>
-          Hapu is Airbnb for nanny share. Share your home, nanny and costs and
-          create new flexible, affordable solutions in childcare.
-        </p>
+  const handleToggleButton = useCallback(() => {
+    setIsOn(!isOn);
+  }, [isOn]);
 
-        <VideoPlayInfo>
-          <div>
-            <FiPlay size={24} color="white" />
-          </div>
+  return (
+    <HeaderContainer>
+      <Image src={backgroundImage} />
+      <Header onSelect={handleToggleButton} isSelected={isOn} />
+      <HeaderContent>
+        <ContentContainer>
+          {isOn ? (
+            <>
+              <h1>Easily create or join a local nanny share with Hapu</h1>
 
-          <a href="/">See hapu in action (27 seconds)</a>
-        </VideoPlayInfo>
-      </ContentContainer>
-      <ImageContainer>
-        <ContentImage />
-      </ImageContainer>
-    </HeaderContent>
-  </HeaderContainer>
-);
+              <p>
+                Hapu is Airbnb for nanny share. Share your home, nanny and costs
+                and create new flexible, affordable solutions in childcare.
+              </p>
+            </>
+          ) : (
+            <>
+              <h1>Create the childcare you need at a price you can afford</h1>
+
+              <p>
+                Connect with other local families to share a nanny from as low
+                as $10.00/hr each. Create your family profile today to get
+                started.
+              </p>
+            </>
+          )}
+
+          <VideoPlayInfo>
+            <div>
+              <FiPlay size={24} color="white" />
+            </div>
+
+            <a href="/">See hapu in action (27 seconds)</a>
+          </VideoPlayInfo>
+        </ContentContainer>
+        <ImageContainer>
+          <ContentImage />
+        </ImageContainer>
+      </HeaderContent>
+    </HeaderContainer>
+  );
+};
 
 export default Hero;

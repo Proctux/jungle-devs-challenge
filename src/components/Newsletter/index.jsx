@@ -7,12 +7,15 @@ import api from "../../services/api";
 
 import { Container, FormContainer, InputContainer } from "./style";
 import ErrorText from "../ErrorText";
+import Loading from "../Loading";
 
 const Newsletter = () => {
   const { handleSubmit, control, errors } = useForm();
   const [isVisible, setIsVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = useCallback(async (data) => {
+    setLoading(true);
     try {
       const { name, email } = data;
 
@@ -24,6 +27,8 @@ const Newsletter = () => {
       setIsVisible(true);
     } catch (err) {
       console.log(err);
+    } finally {
+      setLoading(false);
     }
   }, []);
 
@@ -84,17 +89,21 @@ const Newsletter = () => {
             <ErrorText message={errors?.email?.message} />
           </InputContainer>
 
-          <Button
-            height="48px"
-            width="96px"
-            backgroundColor="#00C88C"
-            borderRadius="4px"
-            color="#fff"
-            type="submit"
-            marginRight="24px"
-          >
-            Send
-          </Button>
+          {loading ? (
+            <Loading />
+          ) : (
+            <Button
+              height="48px"
+              width="96px"
+              backgroundColor="#00C88C"
+              borderRadius="4px"
+              color="#fff"
+              type="submit"
+              marginRight="24px"
+            >
+              Send
+            </Button>
+          )}
         </form>
       </FormContainer>
       {isVisible ? (
