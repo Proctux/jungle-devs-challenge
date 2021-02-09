@@ -5,7 +5,7 @@ import GlobalStyle from "./styles/globalStyles";
 
 const App = () => (
   <>
-    <LandingPage />;
+    <LandingPage />
     <GlobalStyle />
   </>
 );

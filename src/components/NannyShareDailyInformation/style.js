@@ -34,5 +34,6 @@ export const NannyShareDailyContent = styled.div`
     margin-top: 40px;
     color: #3d3d3d;
     text-align: center;
+    line-height: 28px;
   }
 `;

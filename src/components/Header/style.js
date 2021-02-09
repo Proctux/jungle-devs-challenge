@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import logo from "../../assets/logo.svg";
 
-export const Container = styled.div`
+export const Container = styled.header`
   display: flex;
   flex-direction: row;
   height: 80px;

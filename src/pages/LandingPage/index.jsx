@@ -20,6 +20,7 @@ import {
 import Newsletter from "../../components/Newsletter";
 import BillingInformation from "../../components/BillingInformation";
 import NannyShareDailyInformation from "../../components/NannyShareDailyInformation";
+import Footer from "../../components/Footer";
 
 const LandingPage = () => {
   const renderSeparator = () => (
@@ -76,6 +77,8 @@ const LandingPage = () => {
       {renderSeparator()}
 
       <NannyShareDailyInformation />
+
+      <Footer />
     </Container>
   );
 };
