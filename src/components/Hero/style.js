@@ -61,7 +61,7 @@ export const ContentContainer = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 1440px;
+  width: 600px;
 
   @media (max-width: 360px) {
     max-width: 360px;
