@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://api.jungledevs.com/api/v1/challenge-newsletter/",
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 export default api;
