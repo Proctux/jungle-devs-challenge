@@ -2,7 +2,6 @@ import React, { useCallback, useState } from "react";
 import { FiPlay } from "react-icons/fi";
 
 import Header from "../Header";
-import backgroundImage from "../../assets/Image.svg";
 
 import {
   HeaderContainer,
@@ -12,6 +11,7 @@ import {
   ContentImage,
   ImageContainer,
   VideoPlayInfo,
+  Content,
 } from "./style";
 
 const Hero = () => {
@@ -23,21 +23,21 @@ const Hero = () => {
 
   return (
     <HeaderContainer>
-      <Image src={backgroundImage} />
+      <Image />
       <Header onSelect={handleToggleButton} isSelected={isOn} />
       <HeaderContent>
         <ContentContainer>
           {isOn ? (
-            <>
+            <Content>
               <h1>Easily create or join a local nanny share with Hapu</h1>
 
               <p>
                 Hapu is Airbnb for nanny share. Share your home, nanny and costs
                 and create new flexible, affordable solutions in childcare.
               </p>
-            </>
+            </Content>
           ) : (
-            <>
+            <Content>
               <h1>Create the childcare you need at a price you can afford</h1>
 
               <p>
@@ -45,7 +45,7 @@ const Hero = () => {
                 as $10.00/hr each. Create your family profile today to get
                 started.
               </p>
-            </>
+            </Content>
           )}
 
           <VideoPlayInfo>

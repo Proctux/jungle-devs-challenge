@@ -9,6 +9,11 @@ export const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 360px) {
+    width: 360px;
+    height: 524px;
+  }
 `;
 
 export const NannyShareDailyImage = styled.img`
@@ -28,6 +33,11 @@ export const NannyShareDailyContent = styled.div`
 
   h2 {
     color: #3d3d3d;
+
+    @media (max-width: 360px) {
+      width: 328px;
+      text-align: center;
+    }
   }
 
   p {
@@ -35,5 +45,17 @@ export const NannyShareDailyContent = styled.div`
     color: #3d3d3d;
     text-align: center;
     line-height: 28px;
+
+    @media (max-width: 360px) {
+      width: 328px;
+      text-align: center;
+      margin-top: 16px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    width: 360px;
+    height: 308px;
+    margin-top: 0;
   }
 `;

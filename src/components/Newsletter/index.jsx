@@ -63,7 +63,7 @@ const Newsletter = () => {
                   "It is necessary to inform your name before submit the newsletter signature",
               }}
             />
-            <ErrorText message={errors?.name?.message} />
+            {!errors ? <></> : <ErrorText message={errors?.name?.message} />}
           </InputContainer>
 
           <InputContainer>
@@ -95,6 +95,7 @@ const Newsletter = () => {
             <Button
               height="48px"
               width="96px"
+              mobileWidth="328px"
               backgroundColor="#00C88C"
               borderRadius="4px"
               color="#fff"

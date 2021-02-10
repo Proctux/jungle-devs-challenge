@@ -29,6 +29,7 @@ const Header = ({ onSelect, isSelected }) => (
       <Button
         height="44px"
         width="244px"
+        mobileWidth="234px"
         backgroundColor="#00C88C"
         borderRadius="4px"
         color="#fff"

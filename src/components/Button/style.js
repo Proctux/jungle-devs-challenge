@@ -10,4 +10,10 @@ export const ButtonComponent = styled.button`
   color: ${(props) => (props.color ? props.color : "")};
   margin-left: ${(props) => (props.marginLeft ? props.marginLeft : "")};
   margin-right: ${(props) => (props.marginRight ? props.marginRight : "")};
+
+  @media (max-width: 360px) {
+    width: ${(props) => (props.mobileWidth ? props.mobileWidth : "")};
+    font-size: 14px;
+    margin-right: 16px;
+  }
 `;

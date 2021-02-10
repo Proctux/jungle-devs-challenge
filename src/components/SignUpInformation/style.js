@@ -12,15 +12,30 @@ export const Container = styled.div`
     color: #3d3d3d;
     font-size: 28px;
     margin-bottom: 16px;
+
+    @media (max-width: 360px) {
+      max-width: 328px;
+      text-align: center;
+      font-size: 22px;
+    }
   }
 
   p {
     color: #3d3d3d;
     font-size: 18px;
+
+    @media (max-width: 360px) {
+      max-width: 328px;
+      font-size: 16px;
+    }
   }
 
   a {
     font-weight: 500;
+  }
+
+  @media (max-width: 360px) {
+    height: 200px;
   }
 `;
 

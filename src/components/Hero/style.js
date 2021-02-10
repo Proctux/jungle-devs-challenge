@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
 import headerImage from "../../assets/ImageHeader.svg";
+import backgroundImage from "../../assets/Image.svg";
 
 export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 616px;
+
+  @media (max-width: 360px) {
+    width: 360px;
+    height: 540px;
+  }
 `;
 
 export const HeaderContent = styled.div`
@@ -13,6 +19,10 @@ export const HeaderContent = styled.div`
   flex: 1;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 360px) {
+    max-width: 360px;
+  }
 `;
 
 export const ContentContainer = styled.div`
@@ -22,12 +32,44 @@ export const ContentContainer = styled.div`
 
   h1 {
     max-width: 490px;
+
+    @media (max-width: 360px) {
+      max-width: 320px;
+      font-size: 32px;
+      text-align: center;
+    }
   }
 
   p {
     margin-top: 24px;
     max-width: 520px;
     line-height: 24px;
+
+    @media (max-width: 360px) {
+      max-width: 328px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 360px) {
+    width: 360px;
+    display: flex;
+
+    flex-direction: column;
+    margin-right: 0;
+  }
+`;
+
+export const Content = styled.div`
+  width: 1440px;
+
+  @media (max-width: 360px) {
+    max-width: 360px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -52,6 +94,10 @@ export const VideoPlayInfo = styled.div`
     line-height: 24px;
     color: #fff;
   }
+
+  @media (max-width: 360px) {
+    margin-left: 16px;
+  }
 `;
 
 export const Image = styled.img`
@@ -62,8 +108,18 @@ export const Image = styled.img`
   top: 0px;
   z-index: -1;
 
+  background: url(${backgroundImage}) no-repeat center;
   background-color: #5e20a4;
   mix-blend-mode: overlay;
+
+  @media (max-width: 360px) {
+    width: 360px;
+    height: 540px;
+
+    background: url(${backgroundImage}) no-repeat center;
+    background-size: cover;
+    background-color: #5e20a4;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -75,4 +131,8 @@ export const ContentImage = styled.div`
   width: 316px;
   display: flex;
   background: url(${headerImage});
+
+  @media (max-width: 360px) {
+    display: none;
+  }
 `;

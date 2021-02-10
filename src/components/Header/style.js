@@ -9,6 +9,11 @@ export const Container = styled.header`
   width: 1440px;
   height: 80px;
   padding: 0 20px;
+
+  @media (max-width: 360px) {
+    width: 360px;
+    padding: 0 16px;
+  }
 `;
 
 export const HeaderLogoContainer = styled.div`
@@ -22,6 +27,12 @@ export const HeaderLogoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 360px) {
+    margin-left: 16px;
+    height: 64px;
+    width: 48px;
+  }
 `;
 
 export const HeaderLogo = styled.div`
@@ -31,6 +42,13 @@ export const HeaderLogo = styled.div`
   width: 80px;
   margin-top: 64px;
   margin-left: 18px;
+
+  @media (max-width: 360px) {
+    height: 64px;
+    width: 48px;
+    margin-left: 10px;
+    margin-top: 50px;
+  }
 `;
 
 export const HeaderInfo = styled.div`
@@ -43,6 +61,12 @@ export const HeaderInfo = styled.div`
     text-decoration: none;
     color: #ffffff;
     margin-right: 28px;
+  }
+
+  a {
+    @media (max-width: 360px) {
+      display: none;
+    }
   }
 `;
 

@@ -12,4 +12,8 @@ export const InputField = styled.input`
   &::placeholder {
     color: "#000";
   }
+
+  @media (max-width: 360px) {
+    width: 328px;
+  }
 `;

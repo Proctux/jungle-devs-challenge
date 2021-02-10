@@ -16,6 +16,7 @@ const LandingPage = () => {
   const renderSeparator = () => (
     <ItemSeparator
       backgroundWidth="1440px"
+      mobileBackgroundWidth="360px"
       backgroundHeight="1px"
       backgroundColor="#f2f2f2"
       borderWidth="1px"
@@ -48,5 +49,4 @@ const LandingPage = () => {
     </Container>
   );
 };
-
 export default LandingPage;
