@@ -1,5 +1,7 @@
 # Jungle Devs Challenge
 
+![alt text](https://i.ibb.co/wWs2DC4/Screen-Shot-2021-02-10-at-20-06-29.png)
+
 This challenge was proposed by Jungle Devs company to have an opportunity to work as a Software Engineer.
 Below, you're going to find the instructions to run the project.
 
@@ -84,3 +86,10 @@ Please, set the width of 360px on web inspect view mode.
 ![alt text](https://i.ibb.co/BTG91TZ/Screen-Shot-2021-02-10-at-19-07-38.png)
 ![alt text](https://i.ibb.co/zN4ktNG/Screen-Shot-2021-02-10-at-19-07-43.png)
 ![alt text](https://i.ibb.co/VSBV0N8/Screen-Shot-2021-02-10-at-19-07-50.png)
+
+
+# Considerations
+
+Thank you so much for the opportunity. It helped me a lot to understand some concepts that I thought were more difficult to understand like CSS Media-queries and responsiveness.
+
+Feel free to contact me any time on: luiz.ado@hotmail.com
